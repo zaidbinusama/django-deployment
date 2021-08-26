@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "BasicApp/base.html" %}
+
+{% block body_block %}
+
+<div class="bg-light m-2 p-5 rounded ">
+
+<h1>Please Login</h1>
+
+<form action="{% url 'BasicApp:login' %}" method="post">
+{% csrf_token %}
+
+<label for="username">Username</label>
+<input type="text" name="username" placeholder="Enter username">
+<label for="password"></label>
+<input type="password" name="password" >
+<input type="submit" name="" value="Login">
+</form>
+
+</div>
+
+{% endblock %}
